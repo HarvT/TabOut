@@ -50,7 +50,6 @@ func on_current_code_edit_gui_input(event: InputEvent) -> void:
 		var current_line_string: String = active_code_edit.get_line(carat_line)
 		
 		if event.is_released():
-			#active_code_edit.get_viewport().set_input_as_handled()
 			return
 		
 		if event.is_echo():
@@ -82,3 +81,4 @@ func disconnect_active_code_edit() -> void:
 	if active_code_edit and active_code_edit.gui_input.is_connected(on_current_code_edit_gui_input):
 		active_code_edit.gui_input.disconnect(on_current_code_edit_gui_input)
 		active_code_edit = null
+		CLOSING_CHARACTERS[1]
